@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,29 +16,181 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              },
-              fontFamily:{
-                Lexend: 'Lexend',
-              }
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#B4F461',
+                        secondary: '#111111',
+                        dark: 'rgba(17, 17, 17, 0.7)',
+                        light: 'rgba(17, 17, 17, 0.3)',
+                        lighter: 'rgba(17, 17, 17, 0.1)',
+                        token: 'rgba(17, 17, 17, 0.05)',
+                        bgnav: '#F9F7F3',
+                    },
+                    fontFamily: {
+                        Lexend: 'Lexend',
+                    }
+                }
             }
-          }
         }
-      </script>
+    </script>
 </head>
+
 <body class="font-Lexend">
-    <header>
-        <h1>Font checkw</h1>
+    <header class="w-full mx-auto  bg-bgnav">
+        <!-- nav start  -->
+        <nav class="flex flex-col lg:flex-row lg:justify-between gap-5  items-center lg:w-9/12 mx-auto pt-6 py-16">
+            <!-- blog button start  -->
+            <button class="bg-primary text-secondary py-3 px-8 rounded-lg text-xl font-semibold">Blog</button>
+            <!--blog button  end-->
+            <!-- logo start -->
+            <div class="flex items-center gap-4">
+                <img src="./images/logo.png" alt="">
+                <h4 class="font-Lexend text-xl font-semibold text-secondary">Donate Bangladesh</h4>
+            </div>
+            <!-- logo end  -->
+            <!-- your balance start  -->
+            <div class="flex items-center gap-3">
+                <img src="./images/token1.png" alt="">
+                <div>
+                    <p><span id="your-balance" class="text-right text-xl text-dark font-medium">5500</span> BDT</p>
+                </div>
+            </div>
+            <!-- your balance end  -->
+        </nav>
+        <!-- nav end  -->
     </header>
     <main>
+        <section class="mx-auto px-3 mt-12 lg:mt-20">
+            <!-- toggle button section start  -->
+            <div class="flex w-9/12 mx-auto justify-center gap-4">
+                <!-- donation button start  -->
+                <button class="bg-primary text-secondary py-3 px-8 rounded-lg text-xl font-semibold">Donation</button>
+                <!--donation button  end-->
+                <!-- history button start  -->
+                <button
+                    class=" border border-light text-dark rounded-s-lg py-3 px-8 rounded-lg text-xl font-semibold">History</button>
+                <!--history  button  end-->
+            </div>
+            <!-- toggle button section end  -->
+            <section class="w-9/12 mx-auto px-3 mt-12 lg:mt-20 mb-96 space-y-8">
+                <!-- card 1 start-->
+                <div class=" flex border rounded-2xl mx-auto p-8 gap-8">
+                    <div class="lg:w-6/12">
+                        <img class="w-full" src="images/noakhali.png" alt="">
+                    </div>
+                    <div class="w-6/12 space-y-4">
+                        <!-- balance token start -->
+                         
+                        <div class="flex w-[150px] rounded-lg bg-token py-2 px-4 gap-2 ">
+                            <img class="w-6" src="./images/token1.png" alt="">
+                            <p class="text-base text-dark font-medium">
+                                <span id="">0000</span>
+                                BDT
+                            </p>
+                        </div>
+                        <!-- balance token end-->
+                         <!-- donate details start -->
+                        <div>
+                            <h2 class="font-bold text-xl text-secondary"> Donate for Flood at Noakhali, Bangladesh </h2>
+                        </div>
+                        <div>
+                            <p class="text-dark text-base leading-7">
+                                The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+                            </p>
+                        </div>
+                        <!-- donate details end -->
+                         <!-- donate input amount and button start -->
+                        <div class="space-y-4 pt-2">
+                            <input class="w-full p-5 border border-lighter rounded-lg" type="text" placeholder="Write Donation Amount">
+                            <button class="bg-primary w-full text-secondary py-3 px-8 rounded-lg text-xl font-semibold">Donate</button>
+                        </div>
+                        <!-- donate input amount and button end -->
+                        
+                    </div>
+                </div>
+                <!-- card 1 end -->
+                <!-- card 2 start-->
+                <div class=" flex border rounded-2xl mx-auto p-8 gap-8">
+                    <div class="lg:w-6/12">
+                        <img class="w-full" src="images/noakhali.png" alt="">
+                    </div>
+                    <div class="w-6/12 space-y-4">
+                        <!-- balance token start -->
+                         
+                        <div class="flex w-[150px] rounded-lg bg-token py-2 px-4 gap-2 ">
+                            <img class="w-6" src="./images/token1.png" alt="">
+                            <p class="text-base text-dark font-medium">
+                                <span id="">0000</span>
+                                BDT
+                            </p>
+                        </div>
+                        <!-- balance token end-->
+                         <!-- donate details start -->
+                        <div>
+                            <h2 class="font-bold text-xl text-secondary"> Donate for Flood at Noakhali, Bangladesh </h2>
+                        </div>
+                        <div>
+                            <p class="text-dark text-base leading-7">
+                                The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+                            </p>
+                        </div>
+                        <!-- donate details end -->
+                         <!-- donate input amount and button start -->
+                        <div class="space-y-4 pt-2">
+                            <input class="w-full p-5 border border-lighter rounded-lg" type="text" placeholder="Write Donation Amount">
+                            <button class="bg-primary w-full text-secondary py-3 px-8 rounded-lg text-xl font-semibold">Donate</button>
+                        </div>
+                        <!-- donate input amount and button end -->
+                        
+                    </div>
+                </div>
+                <!-- card 2 end -->
+                <!-- card 3 start-->
+                <div class=" flex border rounded-2xl mx-auto p-8 gap-8">
+                    <div class="lg:w-6/12">
+                        <img class="w-full" src="images/noakhali.png" alt="">
+                    </div>
+                    <div class="w-6/12 space-y-4">
+                        <!-- balance token start -->
+                         
+                        <div class="flex w-[150px] rounded-lg bg-token py-2 px-4 gap-2 ">
+                            <img class="w-6" src="./images/token1.png" alt="">
+                            <p class="text-base text-dark font-medium">
+                                <span id="">0000</span>
+                                BDT
+                            </p>
+                        </div>
+                        <!-- balance token end-->
+                         <!-- donate details start -->
+                        <div>
+                            <h2 class="font-bold text-xl text-secondary"> Donate for Flood at Noakhali, Bangladesh </h2>
+                        </div>
+                        <div>
+                            <p class="text-dark text-base leading-7">
+                                The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+                            </p>
+                        </div>
+                        <!-- donate details end -->
+                         <!-- donate input amount and button start -->
+                        <div class="space-y-4 pt-2">
+                            <input class="w-full p-5 border border-lighter rounded-lg" type="text" placeholder="Write Donation Amount">
+                            <button class="bg-primary w-full text-secondary py-3 px-8 rounded-lg text-xl font-semibold">Donate</button>
+                        </div>
+                        <!-- donate input amount and button end -->
+                        
+                    </div>
+                </div>
+                <!-- card 3 end -->
+
+            </section>
+        </section>
 
     </main>
     <footer>
 
     </footer>
-    
+    <script src="./js/utility.js"></script>
 </body>
+
 </html>
