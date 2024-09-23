@@ -1,4 +1,6 @@
 // console.log('connected');
+// global variable 
+let updateBalance = 0;
 
 // toggle button 
 function toggleButtonById(id) {

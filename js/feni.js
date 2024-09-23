@@ -1,29 +1,34 @@
 // donation for flood 
-let updateBalance = 0;
+// let updateBalance = 0;
 
-document.getElementById('btn-flood-donation')
+document.getElementById('btn-feni-donation')
     .addEventListener('click', function(event){
         event.preventDefault();
         
-        const donationAmount = getInputValueByID('input-flood-donation-amount');
+        const donationAmount = getInputValueByID('input-feni-donation-amount');
         
-        const totalFloodDonation = getInnerNumberById('total-flood-donation');
-        if(donationAmount!==isNaN(donationAmount) && donationAmount>0){
+        const totalDonation = getInnerNumberById('total-flood-donation');
+        const availableBalance = getInnerNumberById('your-balance');
+        // if donation amount is bigger than available balance
+        if(donationAmount > availableBalance){
+            alert('insufficient balance!! Please deposit first from any Bank or Mobile Banking')
+            return;
+        }
+        else if(donationAmount!==isNaN(donationAmount) && donationAmount>0){
         //    adding to flood balance
-            updateBalance = totalFloodDonation + donationAmount;
+            updateBalance = totalDonation + donationAmount;
         //    change flood balance
-            updateBalanceInnerTxt('total-flood-donation');
+            updateBalanceInnerTxt('total-feni-donation');
 
-            alert('donate success full !');
+            
             // clearing in put field 
-            clearInputField('input-flood-donation-amount');
+            clearInputField('input-feni-donation-amount');
             // minus from main balance
             updateBalance = getInnerNumberById('your-balance') - donationAmount;
-            
             // change main balance
             updateBalanceInnerTxt('your-balance');
             // create history in history section
-            const donationTitle = getInnerTextById('noakhali');
+            const donationTitle = getInnerTextById('feni');
             // get date and time stamp
             const dateTime = donationDateTime();
             console.log(dateTime);
@@ -35,11 +40,12 @@ document.getElementById('btn-flood-donation')
                 </div>
             `;
             document.getElementById('donate-history').appendChild(history); 
-
             // console.log(history);
-
+            alert('Thank you for your contribution !');
         }
         else{
-            alert('Invalid donation');
+            alert('Invalid Amount!');
+            clearInputField('input-feni-donation-amount');
+            return
         }
     })
