@@ -39,6 +39,7 @@ document.getElementById('btn-quota-donation')
             document.getElementById('donate-history').appendChild(history); 
 
             alert('Thank you for your contribution !');
+            openModal()
         }
         else{
             alert('Invalid Amount!');

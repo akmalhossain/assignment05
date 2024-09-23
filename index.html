@@ -219,12 +219,28 @@
         <section id="donate-history" class="hidden lg:w-9/12 mx-auto px-3 mt-12 lg:mt-20 mb-8 space-y-8">
             <!-- history 1 -->
             <div class="bg-white border border-lighter p-8 rounded-2xl space-y-4 hidden">
-               
+
             </div>
             <!-- end  -->
 
         </section>
         <!-- history section start -->
+        <!-- modal start  -->
+
+        <section id="modal-window"
+            class="hidden flex justify-center items-center w-screen h-screen bg-[#00000057] font-Lexend fixed top-0 left-0 z-50">
+            <div
+                class="flex flex-col w-fit lg:w-3/12 h-fit justify-center items-center bg-white rounded-xl p-6 space-y-4">
+                <h2 class="text-2xl font-bold text-secondary">Congrates!</h2>
+                <img class="w-9" src="images/token1.png" alt="">
+                <p class="text-dark text-base">Yor Have Donated for Humankind</p>
+                <p class="text-secondary font-semibold text-base">Successfully</p>
+                <button id="modal-close" class="bg-lighter hover:bg-primary rounded-lg py-2 px-3 text-secondary ">close
+                    confirmation</button>
+            </div>
+        </section>
+
+        <!-- modal end -->
 
     </main>
 
@@ -238,6 +254,7 @@
     <script src="./js/quota.js"></script>
     <script src="./js/date.js"></script>
     <script src="./js/toggle.js"></script>
+    <script src="./js/modal.js"></script>
 
 </body>
 

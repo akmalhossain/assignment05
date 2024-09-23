@@ -42,6 +42,7 @@ document.getElementById('btn-feni-donation')
             document.getElementById('donate-history').appendChild(history); 
             // console.log(history);
             alert('Thank you for your contribution !');
+            openModal()
         }
         else{
             alert('Invalid Amount!');
