@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!--daisyUI tailwind cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#B4F461',
+                        secondary: '#111111',
+                        dark: 'rgba(17, 17, 17, 0.7)',
+                        light: 'rgba(17, 17, 17, 0.3)',
+                        lighter: 'rgba(17, 17, 17, 0.1)',
+                        token: 'rgba(17, 17, 17, 0.05)',
+                        bgnav: '#F9F7F3',
+                    },
+                    fontFamily: {
+                        Lexend: 'Lexend',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- <style>
+        .accordion-arrow{
+            display: flex;
+        }
+    </style> -->
+</head>
+
+<body class="font-Lexend">
+    <header class="w-full mx-auto  bg-bgnav">
+        <!-- nav start  -->
+        <nav class="flex flex-col lg:flex-row lg:justify-between gap-5  items-center lg:w-9/12 mx-auto pt-6 py-16">
+            <!-- home button start  -->
+            <a href="./index.html">
+                <button class="bg-primary text-secondary py-3 px-8 rounded-lg text-xl font-semibold">Home</button>
+            </a>
+            <!--blog button  end-->
+            <!-- logo start -->
+            <div class="flex items-center gap-4">
+                <img src="./images/logo.png" alt="">
+                <h4 class="font-Lexend text-xl font-semibold text-secondary">Donate Bangladesh</h4>
+            </div>
+            <!-- logo end  -->
+            <!-- your balance start  -->
+            <div class="flex items-center gap-3">
+                <img src="./images/token1.png" alt="">
+                <div>
+                    <p><span id="your-balance" class="text-right text-xl text-dark font-medium">5500</span> BDT</p>
+                </div>
+            </div>
+            <!-- your balance end  -->
+        </nav>
+        <!-- nav end  -->
+    </header>
+    <main class="mx-auto px-3 mt-12 lg:mt-20">
+       <section class="lg:w-9/12 mx-auto px-3 mt-12 lg:mt-20 mb-8 space-y-8">
+            <h2 class="font-bold text-3xl lg:text-5xl font-Lexend">Important FAQ </h2>
+            <!-- accordion  -->
+             <div class="flex justify-between items-center accordion border border-light rounded-2xl p-8">
+                <!-- accordion 1 -->
+               <div class="space-y-4">
+                <h4 class="text-secondary text-2xl font-semibold">What is the Document Object Model? (DOM)</h4>
+                <p id="answer" class="hidden lg:w-6/12 text-dark text-lg">The Document object Model (DOM) provide html document as a tree of object. Dom can create a object model of a html page. It makes easy to access every nodes and elements </p>
+               </div>
+               <div  class="accordion-arrow hidden lg:block w-fit p-8 bg-slate-200 ">
+                <img class="w-8" src="./images/down-arrow.svg" alt="">
+               </div>
+            </div>
+                <!-- accordion 2 -->
+                <div class="flex justify-between items-center accordion border border-light rounded-2xl p-8">
+                    <!-- accordion 1 -->
+                   <div class="space-y-4">
+                    <h4 class="text-secondary text-2xl font-semibold">What is the Document Object Model? (DOM)</h4>
+                    <p id="answer" class="hidden lg:w-6/12 text-dark text-lg">The Document object Model (DOM) provide html document as a tree of object. Dom can create a object model of a html page. It makes easy to access every nodes and elements </p>
+                   </div>
+                   <div  class="accordion-arrow hidden lg:block w-fit p-8 bg-slate-200 ">
+                    <img class="w-8" src="./images/down-arrow.svg" alt="">
+                   </div>
+                </div>
+             
+       </section>
+    </main>
+    <footer>
+
+    </footer>
+    
+    <script src="./js/accordion.js"></script>
+
+
+</body>
+
+</html>

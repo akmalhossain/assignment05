@@ -1,4 +1,4 @@
-// console.log('connected');
+
 // global variable 
 let updateBalance = 0;
 
@@ -38,5 +38,8 @@ function updateBalanceInnerTxt(id) {
 // clear input field
 
 function clearInputField(id) {
-    document.getElementById(id).value = ' ';
+   const inputField = document.getElementById(id);
+   inputField.value = ' ';
 }
+
+
