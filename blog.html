@@ -42,6 +42,7 @@
         .answer.open {
             display: block;
         }
+
     </style>
 </head>
 
@@ -77,9 +78,14 @@
             <div class="accordion border border-lighter rounded-xl space-y-0">
                 <!-- accordion 1 -->
                 <div class="border-b border-lighter">
-                    <button class="questions font-bold text-seconday text-2xl w-full text-left px-4  py-10">What
+                    <button class="questions flex justify-between font-bold text-seconday text-xl w-full text-left px-4  py-10"><span>What
                         is
-                        document object model (DOM)?</button>
+                        document object model (DOM)?</span> 
+                        <span class="rotate-0">
+                            <img width="24px" src="images/down-arrow.svg" alt="">
+                        </span>
+                    </button>
+
                     <div class="answer px-4 pb-4 text-base text-dark">
                         <p>The DOM convert HTML document to a object. It is
                             a programming interface for web documents. Dom provide
@@ -91,8 +97,12 @@
                 <!-- accordion 1 end-->
                 <!-- accordion 2 -->
                 <div class="border-b border-lighter">
-                    <button class="questions font-bold text-seconday text-2xl w-full text-left px-4 py-8">How do you
-                        select an element from the DOM?</button>
+                    <button class="questions flex justify-between font-bold text-seconday text-xl w-full text-left px-4  py-10"><span>How do you
+                        select an element from the DOM? </span>
+                        <span class="rotate-0">
+                            <img width="24px" src="images/down-arrow.svg" alt="">
+                        </span>
+                    </button>
                     <div class="answer px-4 pb-4 text-base text-dark">
                         <p>Select elements from the DOM we can use several javaScript methods. like
                         </p>
@@ -108,8 +118,13 @@
                 <!-- accordion 2 end-->
                 <!-- accordion 3 -->
                 <div class="border-b border-lighter">
-                    <button class="questions font-bold text-seconday text-2xl w-full text-left px-4 py-8">What is event
-                        delegation in the context of the DOM, and why is it useful?</button>
+                    <button class="questions flex justify-between font-bold text-seconday text-xl w-full text-left px-4  py-10"><span>
+                        What is event
+                        delegation in the context of the DOM, and why is it useful?
+                    </span> <span class="rotate-0">
+                        <img width="24px" src="images/down-arrow.svg" alt="">
+                    </span>
+                </button>
                     <div class="answer px-4 pb-4 text-base text-dark">
                         <p>Event delegation use for managing event in the DOM. It do setting up a event on a parent and
                             execute on multiple child.<br>
@@ -125,8 +140,12 @@
                 <!-- accordion 3 end-->
                 <!-- accordion 4 -->
                 <div class="border-b border-lighter">
-                    <button class="questions font-bold text-seconday text-2xl w-full text-left px-4 py-8">How do you
-                        manipulate an element's attributes and styles using the DOM?</button>
+                    <button class="questions flex justify-between font-bold text-seconday text-xl w-full text-left px-4  py-10"><span>How do you
+                        manipulate an element's attributes and styles using the DOM?</span>
+                        <span class="rotate-0">
+                            <img width="24px" src="images/down-arrow.svg" alt="">
+                        </span>
+                    </button>
                     <div class="answer px-4 pb-4 text-base text-dark">
                         <p>We can easily manipulate attributes and styles using the following methods
                         <ul class="pl-6 list-disc font-semibold mt-2"></ul>
@@ -141,9 +160,6 @@
                     </div>
                 </div>
                 <!-- accordion 4 end-->
-
-
-
             </div>
         </section>
     </main>
@@ -152,7 +168,10 @@
     </footer>
 
     <script src="./js/accordion.js"></script>
+<script>
+    
 
+</script>
 
 </body>
 
