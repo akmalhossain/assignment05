@@ -1,34 +1,16 @@
-let accordions = document.getElementsByClassName('accordion');
-// let ans = document.getElementsByClassName('answer');
-for(i=0;i< accordions.length; i++){
-    accordions[i].addEventListener('click', function(event){
-        const panel = this.nextElementSibling;
-        this.classList.toggle('active');
-        // confirm.log(ans.classList.contains)
-        // ans.style.display
-        // console.log(ans);
-        if(panel.style.display === 'block'){
-            panel.style.display = "none";
-            
-            // console.log(ans.classList)
+
+const questions = document.querySelectorAll('.questions');
+for (singleQ of questions){
+    singleQ.addEventListener('click', function(){ //*1 when click on a single question 
+        // 
+        const answer = document.querySelectorAll('.answer');
+        for(let singleAns of answer){
+            if( singleAns !== this.nextElementSibling){  //2 when click if open paragraph is no a sibling 
+                singleAns.classList.remove('open') //2 solution then close it
+            }
         }
-        else if(panel.style.display === 'none'){
-            panel.style.display = "block";
-            // console.log(ans.classList)
-        }
-        else{
-            panel.style.display = "block"
-        }
+        // 
+        // const openAccordion = this.nextElementSibling;
+        this.nextElementSibling.classList.toggle('open'); //*1 solution : open next sibling means paragraph
     })
-
 }
-// console.log(ans.classList);
-
-// document.getElementById('accordion')
-// .addEventListener('click', function(){
-//     const ans = document.querySelector()
-// })
-
-
-    
-  

@@ -35,11 +35,12 @@
         }
     </script>
     <style>
-        .panel{
+        .answer {
             display: none;
         }
-        .active{
-            background-color: white;
+
+        .answer.open {
+            display: block;
         }
     </style>
 </head>
@@ -73,44 +74,77 @@
     <main class="mx-auto px-3 mt-12 lg:mt-20">
         <section class="lg:w-9/12 mx-auto px-3 mt-12 lg:mt-20 mb-8 space-y-8">
             <h2 class="font-bold text-3xl lg:text-5xl font-Lexend">Important FAQ </h2>
-            <!-- accordion 1 -->
-            <div id="accordion" class="flex justify-between items-center accordion border border-light rounded-2xl p-8">
-                <div class="space-y-8">
-                    <div class="accordion w-full">
-                        <h4 class="text-secondary text-2xl font-semibold">What is the Document Object Model? (DOM)</h4>
-                    </div>
-                    <div class="panel">
-                        <p class="lg:w-6/12 text-dark text-lg">The Document object Model (DOM) provide
-                            html document as a tree of object. Dom can create a object model of a html page. It makes
-                            easy
-                            to access every nodes and elements </p>
-                    </div>
-                </div>
-                <div class="arrow hidden lg:block w-fit p-8">
-                    <img class="w-6" src="./images/down-arrow.svg" alt="">
-                </div>
-            </div>
-            <!-- end 1  -->
-            <!-- accordion 2 -->
-            <div class="flex justify-between items-center accordion border border-light rounded-2xl p-8">
-                <div class="space-y-8">
-                    <div class="accordion w-full">
-                        <h4 class="text-secondary text-2xl font-semibold">What is the Document Object Model? (DOM)</h4>
-                    </div>
-                    <div class="panel">
-                        <p class="lg:w-6/12 text-dark text-lg">The Document object Model (DOM) provide
-                            html document as a tree of object. Dom can create a object model of a html page. It makes
-                            easy
-                            to access every nodes and elements </p>
+            <div class="accordion border border-lighter rounded-lg space-y-0">
+                <!-- accordion 1 -->
+                <div class="border-b border-lighter">
+                    <button class="questions font-bold text-seconday text-2xl w-full text-left px-4 backdrop: py-8">What
+                        is
+                        document object model (DOM)?</button>
+                    <div class="answer px-4 pb-4 text-base text-dark">
+                        <p>The DOM convert HTML document to a object. It is
+                            a programming interface for web documents. Dom provide
+                            a Html document as a three. That allow to access and modify nodes, elements and styles
+                            dynamically in web browser.
+                        </p>
                     </div>
                 </div>
-                <div class="arrow hidden lg:block w-fit p-8">
-                    <img class="w-6" src="./images/down-arrow.svg" alt="">
+                <!-- accordion 1 end-->
+                <!-- accordion 2 -->
+                <div class="border-b border-lighter">
+                    <button class="questions font-bold text-seconday text-2xl w-full text-left px-4 py-8">How do you
+                        select an element from the DOM?</button>
+                    <div class="answer px-4 pb-4 text-base text-dark">
+                        <p>Select elements from the DOM we can use several javaScript methods. like
+                        </p>
+                        <ul class="pl-6 list-disc font-semibold mt-2">
+                            <li>getElementById()</li>
+                            <li> getElementByClassName()</li>
+                            <li>getElementByTagName()</li>
+                            <li>querySelector() </li>
+                            <li>querySelectorAll()</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <!-- end 2  -->
-           
+                <!-- accordion 2 end-->
+                <!-- accordion 3 -->
+                <div class="border-b border-lighter">
+                    <button class="questions font-bold text-seconday text-2xl w-full text-left px-4 py-8">What is event
+                        delegation in the context of the DOM, and why is it useful?</button>
+                    <div class="answer px-4 pb-4 text-base text-dark">
+                        <p>Event delegation use for managing event in the DOM. It do setting up a event on a parent and
+                            execute on multiple child.<br>
+                            <b>When an event occurs on a element, it bubbling up to its parent.</b><br>
+                        <ul class="pl-6 list-disc font-semibold mt-2"></ul>
+                        <li>Delegation increase performance by reduces memory</li>
+                        <li> Dynamic and automatically added</li>
+                        <li>Is Makes DOM management simpler</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+                <!-- accordion 3 end-->
+                <!-- accordion 4 -->
+                <div class="border-b border-lighter">
+                    <button class="questions font-bold text-seconday text-2xl w-full text-left px-4 py-8">How do you
+                        manipulate an element's attributes and styles using the DOM?</button>
+                    <div class="answer px-4 pb-4 text-base text-dark">
+                        <p>We can easily manipulate attributes and styles using the following methods
+                        <ul class="pl-6 list-disc font-semibold mt-2"></ul>
+                        <li>getAttribute</li>
+                        <li>setAttribute</li>
+                        <li>removeAttribute</li>
+                        <li>classList</li>
+                        <li>.style</li>
+                        <li>.add</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+                <!-- accordion 4 end-->
 
+
+
+            </div>
         </section>
     </main>
     <footer>
