@@ -27,7 +27,7 @@ document.getElementById('btn-feni-donation')
                     <p class="font-light text-dark text-base">Date : ${dateTime}</p>
                 </div>
             `;
-            document.getElementById('history-title').style.display = 'none';
+            
             document.getElementById('donate-history').appendChild(history); 
             SuccessFullAlert();
             openModal();
