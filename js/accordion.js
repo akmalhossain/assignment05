@@ -1,7 +1,7 @@
 
 const questions = document.querySelectorAll('.questions');
 for (singleQ of questions){
-    singleQ.addEventListener('click', function(){ //*1 when click on a single question 
+    singleQ.addEventListener('click', function(){ //1 when click on a single question 
         // 
         const answer = document.querySelectorAll('.answer');
         for(let singleAns of answer){
@@ -11,6 +11,6 @@ for (singleQ of questions){
         }
         // 
         // const openAccordion = this.nextElementSibling;
-        this.nextElementSibling.classList.toggle('open'); //*1 solution : open next sibling means paragraph
+        this.nextElementSibling.classList.toggle('open'); //1 solution : open next sibling means paragraph
     })
 }
