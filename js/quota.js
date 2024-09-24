@@ -1,5 +1,5 @@
 // donation for flood 
-// let updateBalance = 0;
+
 
 document.getElementById('btn-quota-donation')
     .addEventListener('click', function(event){

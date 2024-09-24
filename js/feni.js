@@ -1,13 +1,11 @@
 // donation for flood 
-// let updateBalance = 0;
-
 document.getElementById('btn-feni-donation')
     .addEventListener('click', function(event){
         event.preventDefault();
         
         const donationAmount = getInputValueByID('input-feni-donation-amount');
-        
-        const totalDonation = getInnerNumberById('total-flood-donation');
+        console.log(donationAmount, updateBalance);
+        const totalDonation = getInnerNumberById('total-feni-donation');
         const availableBalance = getInnerNumberById('your-balance');
         // if donation amount is bigger than available balance
         if(donationAmount > availableBalance){
@@ -19,8 +17,6 @@ document.getElementById('btn-feni-donation')
             updateBalance = totalDonation + donationAmount;
         //    change flood balance
             updateBalanceInnerTxt('total-feni-donation');
-
-            
             // clearing in put field 
             clearInputField('input-feni-donation-amount');
             // minus from main balance
@@ -31,7 +27,6 @@ document.getElementById('btn-feni-donation')
             const donationTitle = getInnerTextById('feni');
             // get date and time stamp
             const dateTime = donationDateTime();
-            console.log(dateTime);
             const history = document.createElement('div');
             history.innerHTML = `
                 <div class="bg-white border border-lighter p-8 rounded-2xl space-y-4">
@@ -49,4 +44,5 @@ document.getElementById('btn-feni-donation')
             clearInputField('input-feni-donation-amount');
             return
         }
+        
     })
