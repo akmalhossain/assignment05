@@ -11,7 +11,8 @@ document.getElementById('btn-flood-donation')
         const availableBalance = getInnerNumberById('your-balance');
         // if donation amount is bigger than available balance
         if(donationAmount > availableBalance){
-            alert('insufficient balance!! Please deposit first from any Bank or Mobile Banking')
+            insufficientBalanceAlert();
+            clearInputField('input-flood-donation-amount');
             return;
         }
         else if(donationAmount!==isNaN(donationAmount) && donationAmount>0){
@@ -36,14 +37,13 @@ document.getElementById('btn-flood-donation')
                     <p class="font-light text-dark text-base">Date : ${dateTime}</p>
                 </div>
             `;
+            document.getElementById('history-title').style.display = 'none';
             document.getElementById('donate-history').appendChild(history); 
-            // console.log(history);
-            alert('Thank you for your contribution !');
-            openModal()
+            SuccessFullAlert();
+            openModal();
         }
         else{
-            alert('Invalid Amount!');
-            // clearing in put field 
+            showInvalidAlert();
             clearInputField('input-flood-donation-amount');
             return
         }

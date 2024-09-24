@@ -8,7 +8,8 @@ document.getElementById('btn-feni-donation')
         const totalDonation = getInnerNumberById('total-feni-donation');
         const availableBalance = getInnerNumberById('your-balance');
         if(donationAmount > availableBalance){
-            alert('insufficient balance!! Please deposit first from any Bank or Mobile Banking')
+            insufficientBalanceAlert();
+            clearInputField('input-feni-donation-amount');
             return;
         }
         else if(donationAmount!==isNaN(donationAmount) && donationAmount>0){
@@ -26,12 +27,13 @@ document.getElementById('btn-feni-donation')
                     <p class="font-light text-dark text-base">Date : ${dateTime}</p>
                 </div>
             `;
+            document.getElementById('history-title').style.display = 'none';
             document.getElementById('donate-history').appendChild(history); 
-            alert('Thank you for your contribution !');
-            openModal()
+            SuccessFullAlert();
+            openModal();
         }
         else{
-            alert('Invalid Amount!');
+            showInvalidAlert();
             clearInputField('input-feni-donation-amount');
             return
         }

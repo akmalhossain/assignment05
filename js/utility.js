@@ -7,7 +7,9 @@ function toggleButtonById(id) {
     document.getElementById('donate-history').classList.add('hidden');
     document.getElementById(id).classList.remove('hidden');
 }
-
+/**
+ * Reusable Functions 
+ */
 // get input value by id
 
 function getInputValueByID(id) {
@@ -39,6 +41,20 @@ function updateBalanceInnerTxt(id) {
 function clearInputField(id) {
    const inputField = document.getElementById(id);
    inputField.value = ' ';
+}
+// show invalid alert 
+function showInvalidAlert() {
+    alert('Invalid Amount! Please input positive numeric value for donation amount');
+ }
+
+//  show insufficient balance alert
+function insufficientBalanceAlert(){
+    alert('insufficient balance!! Please deposit first from any Bank or Mobile Banking');
+}
+
+// success alert
+function SuccessFullAlert(){
+    alert('We appreciate you !!! Thank you for your contribution !' );
 }
 
 
