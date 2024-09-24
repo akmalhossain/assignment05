@@ -19,7 +19,6 @@ document.getElementById('btn-flood-donation')
             updateBalance = totalDonation + donationAmount;
         //    change flood balance
             updateBalanceInnerTxt('total-flood-donation');
-            
             // clearing in put field 
             clearInputField('input-flood-donation-amount');
             // minus from main balance

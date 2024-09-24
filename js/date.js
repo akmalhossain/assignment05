@@ -14,7 +14,5 @@ function donationDateTime() {
 
     const showDateTime = `${day} ${month} ${date} ${year} ${time} ${gmtOffset} ${bdZoneName}`;
 
-    // Log the formatted date to the console
-    // console.log(showDateTime);
     return showDateTime
 }

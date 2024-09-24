@@ -1,8 +1,7 @@
-
 // global variable 
 let updateBalance = 0;
 
-// toggle button 
+// toggle button donate history btn
 function toggleButtonById(id) {
     document.getElementById('donation-cards').classList.add('hidden');
     document.getElementById('donate-history').classList.add('hidden');

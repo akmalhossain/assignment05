@@ -7,25 +7,17 @@ document.getElementById('btn-feni-donation')
         console.log(donationAmount, updateBalance);
         const totalDonation = getInnerNumberById('total-feni-donation');
         const availableBalance = getInnerNumberById('your-balance');
-        // if donation amount is bigger than available balance
         if(donationAmount > availableBalance){
             alert('insufficient balance!! Please deposit first from any Bank or Mobile Banking')
             return;
         }
         else if(donationAmount!==isNaN(donationAmount) && donationAmount>0){
-        //    adding to flood balance
             updateBalance = totalDonation + donationAmount;
-        //    change flood balance
             updateBalanceInnerTxt('total-feni-donation');
-            // clearing in put field 
             clearInputField('input-feni-donation-amount');
-            // minus from main balance
             updateBalance = getInnerNumberById('your-balance') - donationAmount;
-            // change main balance
             updateBalanceInnerTxt('your-balance');
-            // create history in history section
             const donationTitle = getInnerTextById('feni');
-            // get date and time stamp
             const dateTime = donationDateTime();
             const history = document.createElement('div');
             history.innerHTML = `
@@ -35,7 +27,6 @@ document.getElementById('btn-feni-donation')
                 </div>
             `;
             document.getElementById('donate-history').appendChild(history); 
-            // console.log(history);
             alert('Thank you for your contribution !');
             openModal()
         }

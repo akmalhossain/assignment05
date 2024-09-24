@@ -1,6 +1,6 @@
 
 const questions = document.querySelectorAll('.questions');
-for (singleQ of questions){
+for (let singleQ of questions){
     singleQ.addEventListener('click', function(){ 
         const answers = document.querySelectorAll('.answer');
         const arrowUpDown = document.querySelectorAll('.rotate-180');
